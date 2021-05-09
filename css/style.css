@@ -1,0 +1,398 @@
+@font-face {
+  font-family: fontRegular;
+  src: url(../font/SourceSerifPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: fontLight;
+  src: url(../font/SourceSerifPro-Light.ttf);
+}
+
+@font-face {
+  font-family: fontExtraLight;
+  src: url(../font/SourceSerifPro-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: fontBlack;
+  src: url(../font/SourceSerifPro-Black.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: fontRegular;
+  overflow-x: hidden;
+  color: black;
+  z-index: 1;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: visible;
+}
+
+header #side-text {
+  overflow: hidden;
+  font-size: 15em;
+  width: 1700px;
+  position: absolute;
+  color: #fce3ef;
+  font-family: fontBlack;
+  right: -810px;
+  top: 560px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 1;
+}
+
+header .background-image {
+  width: 100%;
+  height: 40%;
+  background-image: url(../img/background-pc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+}
+
+header nav ul {
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  font-size: 1.5em;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+header nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  display: block;
+  position: relative;
+  bottom: 3px;
+  background: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header .arrow {
+  height: 50px;
+  width: 50px;
+  -webkit-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+main {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  padding: 0 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .gallery {
+  margin-bottom: 50px;
+}
+
+main .gallery h1 {
+  font-size: 2.5em;
+  display: inline-block;
+  font-family: fontLight;
+  margin: 50px 0;
+}
+
+main .gallery h1::after {
+  content: '';
+  display: block;
+  height: 2px;
+  position: relative;
+  bottom: 0;
+  width: 60%;
+  margin: 0 auto;
+  background: black;
+}
+
+main .gallery .gallery-box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .gallery a {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+main .gallery a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main .gallery a .gallery-box {
+  margin: 20px;
+  width: 270px;
+  height: 400px;
+  -webkit-box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+main .gallery a .gallery-box .gallery-box-image {
+  height: 55%;
+}
+
+main .gallery a .gallery-box .image-1 {
+  background-image: url(../img/fotografie.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+main .gallery a .gallery-box .image-2 {
+  background-image: url(../img/ilustrace.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+main .gallery a .gallery-box p {
+  font-size: 1.35em;
+  display: inline-block;
+  padding-top: 80px;
+}
+
+main .gallery a .gallery-box p::after {
+  content: '';
+  margin: 0 auto;
+  width: 35px;
+  height: 1px;
+  display: block;
+  position: relative;
+  bottom: 40px;
+  background: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+main .about-me {
+  margin-bottom: 50px;
+}
+
+main .about-me h2 {
+  font-size: 2.5em;
+  display: inline-block;
+  font-family: fontLight;
+  margin: 50px 0 30px 0;
+}
+
+main .about-me h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  position: relative;
+  bottom: 0;
+  width: 60%;
+  margin: 0 auto;
+  background: black;
+}
+
+main .about-me p {
+  font-size: 1.2em;
+}
+
+main .contact {
+  margin-bottom: 150px;
+}
+
+main .contact h3 {
+  font-size: 2.5em;
+  display: inline-block;
+  font-family: fontLight;
+  margin: 50px 0 0 0;
+}
+
+main .contact h3::after {
+  content: '';
+  display: block;
+  height: 2px;
+  position: relative;
+  bottom: 0;
+  width: 60%;
+  margin: 0 auto;
+  background: black;
+}
+
+main .contact .contact-box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+main .contact a {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+main .contact a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main .contact a img {
+  height: 55px;
+  position: relative;
+  top: 55px;
+}
+
+main .contact a .contact-box {
+  margin: 20px;
+  width: 270px;
+  height: 150px;
+  -webkit-box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+main .contact a .contact-box p {
+  font-size: 1.35em;
+  display: inline-block;
+  padding-top: 80px;
+}
+
+main .contact a .contact-box p::after {
+  content: '';
+  margin: 0 auto;
+  width: 35px;
+  height: 1px;
+  display: block;
+  position: relative;
+  bottom: 40px;
+  background: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+main .contact a .contact-box .email-space::after {
+  bottom: 70px;
+}
+
+@media only screen and (max-width: 830px) {
+  header nav ul {
+    margin-left: 10%;
+  }
+  main .gallery .gallery-box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .gallery .gallery-box-container a {
+    margin: 0 auto;
+  }
+  main .about-me h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    position: relative;
+    bottom: 0;
+    width: 60%;
+    margin: 0 auto;
+    background: black;
+  }
+  main .about-me p {
+    font-size: 1.2em;
+  }
+  main .contact {
+    margin-bottom: 100px;
+  }
+  main .contact .contact-box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .contact a {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  header #side-text {
+    font-size: 12em;
+    right: -820px;
+    top: 280px;
+  }
+  main {
+    padding: 0;
+  }
+  main .about-me {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  main {
+    padding: 10%;
+  }
+  main .gallery .gallery-box-container a {
+    margin: 0;
+    padding: 0;
+  }
+  main .gallery .gallery-box-container a .gallery-box {
+    width: 90%;
+    margin: 20px 5%;
+  }
+  main .about-me {
+    padding: 0;
+  }
+  main .contact .contact-box-container a {
+    margin: 0;
+    padding: 0;
+  }
+  main .contact .contact-box-container a .contact-box {
+    width: 90%;
+    margin: 20px 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

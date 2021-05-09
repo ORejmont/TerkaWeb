@@ -1,0 +1,108 @@
+@font-face {
+  font-family: fontRegular;
+  src: url(../font/SourceSerifPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: fontLight;
+  src: url(../font/SourceSerifPro-Light.ttf);
+}
+
+@font-face {
+  font-family: fontExtraLight;
+  src: url(../font/SourceSerifPro-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: fontBlack;
+  src: url(../font/SourceSerifPro-Black.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: fontRegular;
+  color: #000;
+  z-index: 1;
+}
+
+nav {
+  top: 0;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(44, 44, 44, 0.65);
+          box-shadow: 0px 0px 10px 3px rgba(44, 44, 44, 0.65);
+  background-color: #fff;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav div div {
+  position: relative;
+  left: 30px;
+  top: 15px;
+  height: 15px;
+  width: 15px;
+  -webkit-transform: translate(-50%) rotate(45deg);
+          transform: translate(-50%) rotate(45deg);
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+nav a p {
+  font-size: 1.3em;
+  line-height: 50px;
+  margin-left: 30px;
+}
+
+nav #line p {
+  font-size: 1.5em;
+  line-height: 50px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  justify-items: center;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  gap: 20px;
+  row-gap: 15px;
+}
+
+main div {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+main div a img {
+  width: 100%;
+}
+
+main div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/*# sourceMappingURL=gallery.css.map */

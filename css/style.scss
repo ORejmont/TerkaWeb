@@ -1,0 +1,351 @@
+@import "./font";
+
+$primary-color: #fce3ef;
+
+@mixin contentUnderline {
+    content: '';
+    display: block;
+    height: 2px;
+    position: relative;
+    bottom: 0;
+    width: 60%;
+    margin: 0 auto;
+    background: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: fontRegular;
+    overflow-x: hidden;
+    color: black;
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: visible;
+
+    #side-text {
+        overflow: hidden;
+        font-size: 15em;
+        width: 1700px;
+        position: absolute;
+        color: $primary-color;
+        font-family: fontBlack;
+        right: -810px;
+        top: 560px;
+        transform: rotate(-90deg);
+        z-index: 1;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 40%;
+        background-image: url(../img/background-pc.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        z-index: -1;
+    }
+    nav {
+        ul {
+            margin-left: 70px;
+            margin-top: 50px;
+            li {
+                display: inline-block;
+                a {
+                    font-size: 1.5em;
+                    transition-duration: 0.5s;
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 2px;
+                        display: block;
+                        position: relative;
+                        bottom: 3px;
+                        background: black;
+                        transition: 300ms;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .arrow {
+        height: 50px;
+        width: 50px;
+        transform: translate(-50%) rotate(45deg);
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transition-duration: 0.5s;
+    }
+}
+
+main {
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+    padding: 0 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    .gallery {
+        margin-bottom: 50px;
+        h1 {
+            font-size: 2.5em;
+            display: inline-block;
+            font-family: fontLight;
+            margin: 50px 0;
+            &::after {
+
+                @include contentUnderline();
+
+            }
+        }
+
+        .gallery-box-container {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            flex-direction: row;
+        }
+
+        a {
+            transition-duration: 0.5s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            .gallery-box {
+                margin: 20px;
+                width: 270px;
+                height: 400px;
+                box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.5);
+                background-color: #fff;
+
+                .gallery-box-image {
+                    height: 55%;
+                }
+
+                .image-1 {
+                    background-image: url(../img/fotografie.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: top;
+                }
+
+                .image-2 {
+                    background-image: url(../img/ilustrace.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: top;
+                }
+
+                p {
+                    font-size: 1.35em;
+                    display: inline-block;
+                    padding-top: 80px;
+                    &::after {
+                        content: '';
+                        margin: 0 auto;
+                        width: 35px;
+                        height: 1px;
+                        display: block;
+                        position: relative;
+                        bottom: 40px;
+                        background: black;
+                        transition: 300ms;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-me {
+        margin-bottom: 50px;
+        h2 {
+            font-size: 2.5em;
+            display: inline-block;
+            font-family: fontLight;
+            margin: 50px 0 30px 0;
+            &::after {
+
+                @include contentUnderline();
+
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    .contact {
+        margin-bottom: 150px;
+        h3 {
+            font-size: 2.5em;
+            display: inline-block;
+            font-family: fontLight;
+            margin: 50px 0 0 0;
+            &::after {
+
+                @include contentUnderline();
+
+            }
+        }
+
+        .contact-box-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        a {
+            transition-duration: 0.5s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            img {
+                height: 55px;
+                position: relative;
+                top: 55px;
+            }
+            .contact-box {
+                margin: 20px;
+                width: 270px;
+                height: 150px;
+                box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.5);
+                background-color: #fff;
+
+                
+
+                p {
+                    font-size: 1.35em;
+                    display: inline-block;
+                    padding-top: 80px;
+                    &::after {
+                        content: '';
+                        margin: 0 auto;
+                        width: 35px;
+                        height: 1px;
+                        display: block;
+                        position: relative;
+                        bottom: 40px;
+                        background: black;
+                        transition: 300ms;
+                    }
+                }
+
+                .email-space {
+                    &::after {
+                        bottom: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    header {
+        nav {
+            ul {
+                margin-left: 10%;
+            }
+        }
+    }
+
+    main {
+        .gallery {
+            .gallery-box-container {
+                flex-direction: column;
+                a {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .about-me {
+            h2 {
+                &::after {
+    
+                    @include contentUnderline();
+    
+                }
+            }
+    
+            p {
+                font-size: 1.2em;
+            }
+        }
+    
+        .contact {
+            margin-bottom: 100px;
+            .contact-box-container {
+                flex-direction: column;
+            }
+    
+            a {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    header {
+        #side-text {
+            font-size: 12em;
+            right: -820px;
+            top: 280px;
+        }
+    }
+    main {
+        padding: 0;
+        .about-me {
+            padding: 0 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    main {
+        padding: 10%;
+        .gallery {
+            .gallery-box-container {
+                a {
+                    margin: 0;
+                    padding: 0;
+                    .gallery-box {
+                        width: 90%;
+                        margin: 20px 5%;
+                    }
+                }
+            }
+        }
+        .about-me {
+            padding: 0;
+        }
+
+        .contact {
+            .contact-box-container {
+                a {
+                    margin: 0;
+                    padding: 0;
+                    .contact-box {
+                        width: 90%;
+                        margin: 20px 5%;
+                    }
+                }
+            }
+        }
+    }
+}
